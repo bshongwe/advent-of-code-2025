@@ -136,7 +136,7 @@ def determine_next_day():
         
         # All available days (up to today) are complete
         print(f"✅ All released days (1-{current_aoc_day}) are complete!")
-        print(f"🕒 Day {current_aoc_day + 1} will be available tomorrow at midnight EST")
+        print(f"🕒 Day {current_aoc_day + 1} will be available tomorrow at 06:00 SAST")
         return None
     
     # Today's AoC day doesn't exist, generate it
