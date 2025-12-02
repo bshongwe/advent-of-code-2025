@@ -124,7 +124,7 @@ def determine_next_day():
     if current_aoc_day in existing_days:
         print(f"📋 Day {current_aoc_day} (today) already exists!")
         
-        # Check if we're missing any previous days
+        # Check if we're missing any previous days that were already released
         missing_days = []
         for day in range(1, current_aoc_day):
             if day not in existing_days:
@@ -134,14 +134,10 @@ def determine_next_day():
             print(f"🔍 Missing previous days: {missing_days}")
             return min(missing_days)
         
-        # All previous days exist, generate tomorrow if valid
-        next_day = current_aoc_day + 1
-        if next_day <= 25:
-            print(f"⏭️  Generating tomorrow's day: {next_day}")
-            return next_day
-        else:
-            print("🎄 All 25 days of Advent of Code are done!")
-            return None
+        # All available days (up to today) are complete
+        print(f"✅ All released days (1-{current_aoc_day}) are complete!")
+        print(f"🕒 Day {current_aoc_day + 1} will be available tomorrow at midnight EST")
+        return None
     
     # Today's AoC day doesn't exist, generate it
     print(f"📅 Generating today's day: {current_aoc_day}")
@@ -153,6 +149,8 @@ def main():
     if len(sys.argv) == 1:
         # No argument provided - auto-detect next day
         day_number = determine_next_day()
+        if day_number is None:
+            sys.exit(0)  # All days complete
         auto_mode = True
     elif len(sys.argv) == 2:
         # Day number provided as argument
@@ -167,13 +165,9 @@ def main():
             sys.exit(1)
     else:
         print("Usage:")
-        print("  python3 generate_day.py          # Auto-generate next day")
+        print("  python3 generate_day.py          # Auto-generate based on today's date")
         print("  python3 generate_day.py <day>    # Generate specific day")
         print("Example: python3 generate_day.py 3")
-        sys.exit(1)
-    
-    if day_number > 25:
-        print("❌ Advent of Code only goes up to day 25!")
         sys.exit(1)
     
     existing_days = get_existing_days()
