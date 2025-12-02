@@ -112,27 +112,40 @@ def determine_next_day():
     if now.month == 12 and 1 <= now.day <= 25:
         current_aoc_day = now.day
     else:
-        # If not in December 1-25, default to day 1
-        current_aoc_day = 1
+        # If not in December 1-25, just generate next sequential day
+        existing_days = get_existing_days()
+        if not existing_days:
+            return 1
+        return max(existing_days) + 1
     
     existing_days = get_existing_days()
     
-    if not existing_days:
-        # No days exist, start with day 1 or current date
-        return current_aoc_day
-    
-    max_existing_day = max(existing_days)
-    
-    # If today's AoC day already exists, generate the next one
+    # Check if today's AoC day already exists
     if current_aoc_day in existing_days:
-        return max_existing_day + 1
+        print(f"📋 Day {current_aoc_day} (today) already exists!")
+        
+        # Check if we're missing any previous days
+        missing_days = []
+        for day in range(1, current_aoc_day):
+            if day not in existing_days:
+                missing_days.append(day)
+        
+        if missing_days:
+            print(f"🔍 Missing previous days: {missing_days}")
+            return min(missing_days)
+        
+        # All previous days exist, generate tomorrow if valid
+        next_day = current_aoc_day + 1
+        if next_day <= 25:
+            print(f"⏭️  Generating tomorrow's day: {next_day}")
+            return next_day
+        else:
+            print("🎄 All 25 days of Advent of Code are done!")
+            return None
     
-    # If today's AoC day doesn't exist but is valid, generate it
-    if current_aoc_day <= 25:
-        return current_aoc_day
-    
-    # Otherwise, generate the next sequential day
-    return max_existing_day + 1
+    # Today's AoC day doesn't exist, generate it
+    print(f"📅 Generating today's day: {current_aoc_day}")
+    return current_aoc_day
 
 def main():
     """Main function."""
