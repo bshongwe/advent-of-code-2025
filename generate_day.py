@@ -87,7 +87,37 @@ fn main() {{
     
     print(f"✅ Day {day_number} structure created successfully!")
     print(f"📍 Location: {day_folder}")
+    
+    # Update README.md progress tracker
+    update_readme_progress(day_number)
+    
     return True
+
+def update_readme_progress(day_number):
+    """Update README.md with the newly created day."""
+    repo_root = Path(__file__).parent
+    readme_path = repo_root / "README.md"
+    
+    if not readme_path.exists():
+        print("⚠️  README.md not found, skipping update")
+        return
+    
+    try:
+        content = readme_path.read_text()
+        
+        # Find the line for this day and mark it as available
+        search_pattern = f"- [ ] **Day {day_number}**"
+        replace_pattern = f"- [ ] **Day {day_number}** - 📁 Files ready"
+        
+        if search_pattern in content:
+            updated_content = content.replace(search_pattern, replace_pattern)
+            readme_path.write_text(updated_content)
+            print(f"📝 Updated README.md progress for Day {day_number}")
+        else:
+            print(f"⚠️  Could not find Day {day_number} entry in README.md")
+            
+    except Exception as e:
+        print(f"⚠️  Failed to update README.md: {e}")
 
 def get_existing_days():
     """Get a list of existing day numbers."""
@@ -108,11 +138,11 @@ def determine_next_day():
     """Determine the next day to generate based on date and existing folders."""
     now = datetime.now()
     
-    # Advent of Code runs December 1-25
-    if now.month == 12 and 1 <= now.day <= 25:
+    # Advent of Code 2025 runs December 1-12
+    if now.month == 12 and 1 <= now.day <= 12:
         current_aoc_day = now.day
     else:
-        # If not in December 1-25, just generate next sequential day
+        # If not in December 1-12, just generate next sequential day
         existing_days = get_existing_days()
         if not existing_days:
             return 1
@@ -136,7 +166,10 @@ def determine_next_day():
         
         # All available days (up to today) are complete
         print(f"✅ All released days (1-{current_aoc_day}) are complete!")
-        print(f"🕒 Day {current_aoc_day + 1} will be available tomorrow at 06:00 SAST")
+        if current_aoc_day < 12:
+            print(f"🕒 Day {current_aoc_day + 1} will be available tomorrow at 06:00 SAST")
+        else:
+            print("🎄 Advent of Code 2025 complete! All 12 days done!")
         return None
     
     # Today's AoC day doesn't exist, generate it
@@ -156,8 +189,8 @@ def main():
         # Day number provided as argument
         try:
             day_number = int(sys.argv[1])
-            if day_number < 1 or day_number > 25:
-                print("❌ Day number must be between 1 and 25")
+            if day_number < 1 or day_number > 12:
+                print("❌ Day number must be between 1 and 12")
                 sys.exit(1)
             auto_mode = False
         except ValueError:
