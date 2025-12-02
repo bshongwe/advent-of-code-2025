@@ -33,7 +33,8 @@ def create_day_structure(day_number):
         "solution.py",
         "solution-part2.py", 
         "solution.rs",
-        "solution-part2.rs"
+        "solution-part2.rs",
+        "solution.csv"
     ]
     
     # Python template
@@ -72,6 +73,8 @@ fn main() {{
             content = python_template.format(day=day_number)
         elif filename.endswith('.rs'):
             content = rust_template.format(day=day_number)
+        elif filename.endswith('.csv'):
+            content = ""  # Empty CSV file for puzzle input
         else:
             content = ""
             
@@ -107,7 +110,7 @@ def main():
         print("=" * 50)
         print("Next steps:")
         print(f"1. cd day-{day_number}")
-        print("2. Add your puzzle input to a CSV file (will be gitignored)")
+        print("2. Add your puzzle input to solution.csv (already created, gitignored)")
         print("3. Start coding your solution!")
     else:
         sys.exit(1)
