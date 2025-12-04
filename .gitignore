@@ -3,3 +3,5 @@
 */*.csv
 CRON_SETUP.md
 *.log
+*.DS_Store
+.vscode/
