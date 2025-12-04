@@ -137,7 +137,7 @@ node solution-part2.js       # Part 2
 
 ## 🔧 Tools & Technologies
 
-- **Languages**: Python 3.11+, Rust 1.91+
+- **Languages**: Python 3.11+, Rust 1.91+, Node.js 18+
 - **Automation**: Bash scripts, Cron jobs
 - **Version Control**: Git with smart .gitignore
 - **Development**: VS Code with extensions
@@ -148,6 +148,8 @@ node solution-part2.js       # Part 2
 - [AoC Reddit Community](https://www.reddit.com/r/adventofcode/)
 - [Python Documentation](https://docs.python.org/3/)
 - [Rust Documentation](https://doc.rust-lang.org/)
+- [JavaScript Documentation (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Node.js Documentation](https://nodejs.org/en/docs/)
 
 ## 🏆 Statistics
 
