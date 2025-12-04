@@ -100,6 +100,14 @@ rustc solution-part2.rs && ./solution-part2  # Part 2
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
+### Day 3 (Dec 3, 2025)
+- **Challenge**: Grid Walker
+- **Part 1**: Navigate through a 2D grid
+- **Part 2**: [Enhanced version - update after completing]
+- **Languages**: Python ⏳, Rust ⏳
+- **Time to Solve**: [Your time here]
+- **Difficulty**: ⭐⭐⭐☆☆
+
 ## 🎯 Goals
 
 - [x] Set up automated file generation

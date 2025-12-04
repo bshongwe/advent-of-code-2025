@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
 """
-README Update Helper Script
+READM    # Find where to insert the new entry (before Goals section)
+    insert_marker = "\n## 🎯 Goals"
+    
+    if insert_marker in content:
+        content = content.replace(insert_marker, f"\n{new_entry}## 🎯 Goals")
+        readme_path.write_text(content)
+        print(f"✅ Added Day {day} daily log entry")
+        return True
+    else:
+        print("⚠️  Could not find insertion point in README.md")
+        return Falselper Script
 Helps update the daily log and progress in README.md
 """
 
@@ -19,10 +29,7 @@ def update_daily_log(day, title, description, difficulty="⭐⭐⭐☆☆"):
         
     content = readme_path.read_text()
     
-    # Current date for the log entry
-    current_date = datetime.now().strftime("%b %d, %Y")
-    
-    # Create the new daily log entry
+    # Create the new daily log entry with the specific difficulty rating
     new_entry = f"""### Day {day} (Dec {day}, 2025)
 - **Challenge**: {title}
 - **Part 1**: {description}
@@ -33,11 +40,11 @@ def update_daily_log(day, title, description, difficulty="⭐⭐⭐☆☆"):
 
 """
     
-    # Find where to insert the new entry (after Day 2's entry)
-    insert_marker = "**Difficulty**: [Star rating]\n\n## 🎯 Goals"
+    # Find where to insert the new entry (before the Goals section)
+    goals_marker = "## 🎯 Goals"
     
-    if insert_marker in content:
-        content = content.replace(insert_marker, f"**Difficulty**: [Star rating]\n\n{new_entry}## 🎯 Goals")
+    if goals_marker in content:
+        content = content.replace(goals_marker, f"{new_entry}{goals_marker}")
         readme_path.write_text(content)
         print(f"✅ Added Day {day} daily log entry")
         return True
