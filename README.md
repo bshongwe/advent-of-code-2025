@@ -128,12 +128,12 @@ node solution-part2.js       # Part 2
 ## 🎯 Goals
 
 - [x] Set up automated file generation
-- [x] Create templates for both Python and Rust
+- [x] Create templates for Python, Rust, and JavaScript
 - [x] Implement cron job automation
 - [ ] Complete all 12 days
 - [ ] Optimize solutions for performance
 - [ ] Document interesting algorithms used
-- [ ] Compare Python vs Rust execution times
+- [ ] Compare Python vs Rust vs JavaScript execution times
 
 ## 🔧 Tools & Technologies
 
