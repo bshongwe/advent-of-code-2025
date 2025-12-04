@@ -17,6 +17,8 @@ advent-of-code-2025/
     ├── solution-part2.py   # Python solution (Part 2)
     ├── solution.rs         # Rust solution (Part 1)
     ├── solution-part2.rs   # Rust solution (Part 2)
+    ├── solution.js         # JavaScript solution (Part 1)
+    ├── solution-part2.js   # JavaScript solution (Part 2)
     └── solution.csv        # Puzzle input data (gitignored)
 ```
 
@@ -44,7 +46,7 @@ crontab -e
 - **📅 Date-Aware**: Automatically detects which day should be generated
 - **⏰ Release Schedule**: Respects AoC release times (06:00 SAST)
 - **🔄 Auto-Generation**: Cron job creates files when puzzles are released
-- **🐍 🦀 Multi-Language**: Templates for both Python and Rust solutions
+- **🐍 🦀 🟨 Multi-Language**: Templates for Python, Rust, and JavaScript solutions
 - **📝 Smart Logging**: All automation activities are logged
 - **🔍 Missing Day Detection**: Finds and creates missing previous days
 
@@ -82,13 +84,20 @@ rustc solution.rs && ./solution           # Part 1
 rustc solution-part2.rs && ./solution-part2  # Part 2
 ```
 
+### JavaScript Solutions
+```bash
+cd day-X
+node solution.js             # Part 1
+node solution-part2.js       # Part 2
+```
+
 ## 📝 Daily Log
 
 ### Day 1 (Dec 1, 2025)
 - **Challenge**: Dial Puzzle - Track position on a circular dial
 - **Part 1**: Count how many times the dial reaches position 0
 - **Part 2**: [Enhanced version details]
-- **Languages**: Python ✅, Rust ✅
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐☆☆☆
 
@@ -96,7 +105,7 @@ rustc solution-part2.rs && ./solution-part2  # Part 2
 - **Challenge**: Gift Shop - Identify invalid product IDs from ranges
 - **Part 1**: Find IDs where the number is a pattern repeated exactly twice (e.g., 1212, 565656)
 - **Part 2**: Find IDs where the number is any pattern repeated at least twice (e.g., 111, 1212, 123123123)  
-- **Languages**: Python ✅, Rust ✅
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
@@ -104,7 +113,7 @@ rustc solution-part2.rs && ./solution-part2  # Part 2
 - **Challenge**: Grid Walker
 - **Part 1**: Navigate through a 2D grid
 - **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ✅, Rust ✅
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
@@ -112,7 +121,7 @@ rustc solution-part2.rs && ./solution-part2  # Part 2
 - **Challenge**: Printing Department
 - **Part 1**: You ride the escalator down to the printing department. They're clearly getting ready for Christm...
 - **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ✅, Rust ✅
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
@@ -144,10 +153,10 @@ rustc solution-part2.rs && ./solution-part2  # Part 2
 
 - **Total Stars**: 8/24 ⭐
 - **Days Completed**: 4/12
-- **Languages Used**: Python, Rust
+- **Languages Used**: Python, Rust, JavaScript
 - **Automation Level**: Full 🤖
 
 ---
 
 *Last updated: December 04, 2025*  
-*Next puzzle releases: December 5 at 06:00 SAST*
+*Next puzzle releases: December 5 at 07:00 SAST*
