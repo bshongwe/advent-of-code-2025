@@ -51,7 +51,7 @@ crontab -e
 ## 📊 Progress Tracker
 
 ### Week 1 (Dec 1-7)
-- [x] **Day 1** - ⭐⭐ Dial Puzzle - *Password: 1029 / 5892*
+- [x] **Day 1** - ⭐⭐ Dial Puzzle - *Password*
 - [x] **Day 2** - ⭐⭐ Gift Shop - *Invalid ID pattern detection*
 - [x] **Day 3** - ⭐⭐ Grid Walker
 - [x] **Day 4** - ⭐⭐ Printing Department
