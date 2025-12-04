@@ -135,6 +135,13 @@ def update_daily_log(day, title, description, difficulty="⭐⭐⭐☆☆"):
     
     if goals_marker in content:
         content = content.replace(goals_marker, f"{new_entry}{goals_marker}")
+        
+        # Update timestamp
+        current_date = datetime.now().strftime("%B %d, %Y")
+        timestamp_pattern = r"\*Last updated: [^*]+\*"
+        new_timestamp = f"*Last updated: {current_date}*"
+        content = re.sub(timestamp_pattern, new_timestamp, content)
+        
         readme_path.write_text(content)
         print(f"✅ Added Day {day} daily log entry: {title}")
         return True
@@ -174,6 +181,12 @@ def mark_day_completed(day, part=1):
         stats_pattern = r"\*\*Total Stars\*\*: \d+/\d+ ⭐\n- \*\*Days Completed\*\*: \d+/\d+"
         new_stats = f"**Total Stars**: {stars}/24 ⭐\n- **Days Completed**: {days}/12"
         content = re.sub(stats_pattern, new_stats, content)
+        
+        # Update timestamp
+        current_date = datetime.now().strftime("%B %d, %Y")
+        timestamp_pattern = r"\*Last updated: [^*]+\*"
+        new_timestamp = f"*Last updated: {current_date}*"
+        content = re.sub(timestamp_pattern, new_timestamp, content)
         
         readme_path.write_text(content)
         print(f"✅ Marked Day {day} Part {part} as completed")

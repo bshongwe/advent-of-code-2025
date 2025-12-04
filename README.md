@@ -53,8 +53,8 @@ crontab -e
 ### Week 1 (Dec 1-7)
 - [x] **Day 1** - ⭐⭐ Dial Puzzle - *Password: 1029 / 5892*
 - [x] **Day 2** - ⭐⭐ Gift Shop - *Invalid ID pattern detection*
-- [ ] **Day 3** - Available Dec 3 at 06:00 SAST
-- [ ] **Day 4** - Available Dec 4 at 06:00 SAST
+- [x] **Day 3** - ⭐⭐ Grid Walker
+- [x] **Day 4** - ⭐⭐ Printing Department
 - [ ] **Day 5** - Available Dec 5 at 06:00 SAST
 - [ ] **Day 6** - Available Dec 6 at 06:00 SAST
 - [ ] **Day 7** - Available Dec 7 at 06:00 SAST
@@ -108,6 +108,14 @@ rustc solution-part2.rs && ./solution-part2  # Part 2
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
+### Day 4 (Dec 4, 2025)
+- **Challenge**: Printing Department
+- **Part 1**: You ride the escalator down to the printing department. They're clearly getting ready for Christm...
+- **Part 2**: [Enhanced version - update after completing]
+- **Languages**: Python ⏳, Rust ⏳
+- **Time to Solve**: [Your time here]
+- **Difficulty**: ⭐⭐⭐☆☆
+
 ## 🎯 Goals
 
 - [x] Set up automated file generation
@@ -134,12 +142,12 @@ rustc solution-part2.rs && ./solution-part2  # Part 2
 
 ## 🏆 Statistics
 
-- **Total Stars**: 4/24 ⭐
-- **Days Completed**: 2/12
+- **Total Stars**: 8/24 ⭐
+- **Days Completed**: 4/12
 - **Languages Used**: Python, Rust
 - **Automation Level**: Full 🤖
 
 ---
 
-*Last updated: December 2, 2025*  
-*Next puzzle releases: December 3 at 06:00 SAST*
+*Last updated: December 04, 2025*  
+*Next puzzle releases: December 5 at 06:00 SAST*
