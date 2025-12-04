@@ -1,6 +1,6 @@
 use std::fs;
 
-fn is_invalid_id(num: i32) -> bool {
+fn is_invalid_id(num: i64) -> bool {
     let s = num.to_string();
     let length = s.len();
     
@@ -33,13 +33,13 @@ fn solve_gift_shop(input_string: &str) -> i64 {
             continue;
         }
         
-        let start: i32 = parts[0].parse().unwrap_or(0);
-        let end: i32 = parts[1].parse().unwrap_or(0);
+        let start: i64 = parts[0].parse().unwrap_or(0);
+        let end: i64 = parts[1].parse().unwrap_or(0);
         
         // Check each ID in the range
         for num in start..=end {
             if is_invalid_id(num) {
-                total_sum += num as i64;
+                total_sum += num;
             }
         }
     }
