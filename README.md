@@ -96,7 +96,7 @@ rustc solution-part2.rs && ./solution-part2  # Part 2
 - **Challenge**: Gift Shop - Identify invalid product IDs from ranges
 - **Part 1**: Find IDs where the number is a pattern repeated exactly twice (e.g., 1212, 565656)
 - **Part 2**: Find IDs where the number is any pattern repeated at least twice (e.g., 111, 1212, 123123123)  
-- **Languages**: Python ✅, Rust ⏳
+- **Languages**: Python ✅, Rust ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
@@ -104,7 +104,7 @@ rustc solution-part2.rs && ./solution-part2  # Part 2
 - **Challenge**: Grid Walker
 - **Part 1**: Navigate through a 2D grid
 - **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ⏳, Rust ⏳
+- **Languages**: Python ✅, Rust ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
@@ -112,7 +112,7 @@ rustc solution-part2.rs && ./solution-part2  # Part 2
 - **Challenge**: Printing Department
 - **Part 1**: You ride the escalator down to the printing department. They're clearly getting ready for Christm...
 - **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ⏳, Rust ⏳
+- **Languages**: Python ✅, Rust ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
