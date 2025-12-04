@@ -38,6 +38,8 @@ def create_day_structure(day_number):
         "solution-part2.py", 
         "solution.rs",
         "solution-part2.rs",
+        "solution.js",
+        "solution-part2.js",
         "solution.csv"
     ]
     
@@ -68,6 +70,23 @@ fn main() {{
     println!("Result: {{}}", result);
 }}
 '''
+
+    # JavaScript template
+    javascript_template = '''const fs = require('fs');
+
+// Advent of Code 2025 - Day {day}
+
+function solve() {{
+    // TODO: Implement solution
+    return 0;
+}}
+
+// Read puzzle input
+// const puzzleInput = fs.readFileSync('solution.csv', 'utf8');
+
+const result = solve();
+console.log(`Result: ${{result}}`);
+'''
     
     # Create each file
     for filename in files_to_create:
@@ -77,6 +96,8 @@ fn main() {{
             content = python_template.format(day=day_number)
         elif filename.endswith('.rs'):
             content = rust_template.format(day=day_number)
+        elif filename.endswith('.js'):
+            content = javascript_template.format(day=day_number)
         elif filename.endswith('.csv'):
             content = ""  # Empty CSV file for puzzle input
         else:
