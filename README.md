@@ -63,7 +63,7 @@ crontab -e
 
 ### Week 2 (Dec 8-12)
 - [ ] **Day 8** - Available Dec 8 at 06:00 SAST
-- [ ] **Day 9** - 📁 Files ready - Available Dec 9 at 06:00 SAST
+- [ ] **Day 9** - Available Dec 9 at 06:00 SAST
 - [ ] **Day 10** - Available Dec 10 at 06:00 SAST
 - [ ] **Day 11** - Available Dec 11 at 06:00 SAST
 - [ ] **Day 12** - Final Day! Available Dec 12 at 06:00 SAST ⭐
