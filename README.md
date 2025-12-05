@@ -55,9 +55,9 @@ crontab -e
 ### Week 1 (Dec 1-7)
 - [x] **Day 1** - ⭐⭐ Dial Puzzle - *Password*
 - [x] **Day 2** - ⭐⭐ Gift Shop - *Invalid ID pattern detection*
-- [x] **Day 3** - ⭐⭐ Grid Walker
-- [x] **Day 4** - ⭐⭐ Printing Department
-- [x] **Day 5** - ⭐⭐ - 📁 Files ready - Available Dec 5 at 06:00 SAST
+- [x] **Day 3** - ⭐⭐ Grid Walker - *Navigate through a 2D grid*
+- [x] **Day 4** - ⭐⭐ Printing Department - *You ride the escalator down to the printing dep...*
+- [x] **Day 5** - ⭐⭐ Cafeteria - *As the forklifts break through the wall, the El...*
 - [ ] **Day 6** - Available Dec 6 at 06:00 SAST
 - [ ] **Day 7** - Available Dec 7 at 06:00 SAST
 
