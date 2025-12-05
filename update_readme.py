@@ -160,18 +160,24 @@ def mark_day_completed(day, part=1):
         
     content = readme_path.read_text()
     
-    # Update progress tracker
+    # Get the challenge title from daily log if it exists
+    title_pattern = f"### Day {day} \(Dec {day}, 2025\)\n- \*\*Challenge\*\*: ([^\n]+)"
+    title_match = re.search(title_pattern, content)
+    challenge_title = title_match.group(1) if title_match else f"Day {day}"
+    
+    # Update progress tracker - handle various formats
+    day_pattern = f"- \[[x ]\] \*\*Day {day}\*\*[^\n]*"
+    
     if part == 1:
         # Mark part 1 completed
-        search_pattern = f"- [ ] **Day {day}**"
-        replace_pattern = f"- [x] **Day {day}** - ⭐"
+        new_entry = f"- [x] **Day {day}** - ⭐ {challenge_title}"
     else:
         # Mark both parts completed
-        search_pattern = f"- [x] **Day {day}** - ⭐"
-        replace_pattern = f"- [x] **Day {day}** - ⭐⭐"
+        new_entry = f"- [x] **Day {day}** - ⭐⭐ {challenge_title}"
     
-    if search_pattern in content:
-        content = content.replace(search_pattern, replace_pattern)
+    # Replace the entire day line
+    if re.search(day_pattern, content):
+        content = re.sub(day_pattern, new_entry, content)
         
         # Update stats
         stars = content.count("⭐⭐") * 2 + (content.count("⭐") - content.count("⭐⭐"))
