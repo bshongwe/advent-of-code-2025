@@ -98,7 +98,7 @@ node solution-part2.js       # Part 2
 - **Part 1**: Count how many times the dial reaches position 0
 - **Part 2**: [Enhanced version details]
 - **Languages**: Python ✅, Rust ✅, JavaScript ✅
-- **Time to Solve**: 40 minutes
+- **Time to Solve**: 12 hours 20 minutes
 - **Difficulty**: ⭐⭐☆☆☆
 
 ### Day 2 (Dec 2, 2025)
@@ -106,7 +106,7 @@ node solution-part2.js       # Part 2
 - **Part 1**: Find IDs where the number is a pattern repeated exactly twice (e.g., 1212, 565656)
 - **Part 2**: Find IDs where the number is any pattern repeated at least twice (e.g., 111, 1212, 123123123)  
 - **Languages**: Python ✅, Rust ✅, JavaScript ✅
-- **Time to Solve**: 1 hour 15 minutes
+- **Time to Solve**: 15 minutes
 - **Difficulty**: ⭐⭐⭐☆☆
 
 ### Day 3 (Dec 3, 2025)
@@ -114,7 +114,7 @@ node solution-part2.js       # Part 2
 - **Part 1**: Navigate through a 2D grid
 - **Part 2**: [Enhanced version - update after completing]
 - **Languages**: Python ✅, Rust ✅, JavaScript ✅
-- **Time to Solve**: 45 minutes
+- **Time to Solve**: 2 hours 11 minutes
 - **Difficulty**: ⭐⭐⭐☆☆
 
 ### Day 4 (Dec 4, 2025)
@@ -122,7 +122,7 @@ node solution-part2.js       # Part 2
 - **Part 1**: You ride the escalator down to the printing department. They're clearly getting ready for Christm...
 - **Part 2**: [Enhanced version - update after completing]
 - **Languages**: Python ✅, Rust ✅, JavaScript ✅
-- **Time to Solve**: 2 hour 45 minutes
+- **Time to Solve**: 1 hour 52 minutes
 - **Difficulty**: ⭐⭐⭐☆☆
 
 ### Day 5 (Dec 5, 2025)
@@ -130,7 +130,7 @@ node solution-part2.js       # Part 2
 - **Part 1**: As the forklifts break through the wall, the Elves are delighted to discover that there was a caf...
 - **Part 2**: [Enhanced version - update after completing]
 - **Languages**: Python ⏳, Rust ⏳, JavaScript ⏳
-- **Time to Solve**: 1 hour 23 minutes
+- **Time to Solve**: 1 hour 9 minutes
 - **Difficulty**: ⭐⭐⭐☆☆
 
 ## 🎯 Goals
