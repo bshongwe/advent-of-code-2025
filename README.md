@@ -57,7 +57,7 @@ crontab -e
 - [x] **Day 2** - ⭐⭐ Gift Shop - *Invalid ID pattern detection*
 - [x] **Day 3** - ⭐⭐ Grid Walker
 - [x] **Day 4** - ⭐⭐ Printing Department
-- [ ] **Day 5** - Available Dec 5 at 06:00 SAST
+- [ ] **Day 5** - 📁 Files ready - Available Dec 5 at 06:00 SAST
 - [ ] **Day 6** - Available Dec 6 at 06:00 SAST
 - [ ] **Day 7** - Available Dec 7 at 06:00 SAST
 
