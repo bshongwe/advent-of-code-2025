@@ -161,19 +161,44 @@ def mark_day_completed(day, part=1):
     content = readme_path.read_text()
     
     # Get the challenge title and description from daily log if it exists
-    title_pattern = f"### Day {day} \(Dec {day}, 2025\)\n- \*\*Challenge\*\*: ([^\n]+)\n- \*\*Part 1\*\*: ([^\n]+)"
-    title_match = re.search(title_pattern, content)
-    if title_match:
-        challenge_title = title_match.group(1)
-        part1_desc = title_match.group(2)
-        # Create a short description from Part 1
-        if len(part1_desc) > 50:
-            description = part1_desc[:47] + "..."
+    if part == 2:
+        # For Part 2, try to get Part 2 description first
+        title_pattern = f"### Day {day} \(Dec {day}, 2025\)\n- \*\*Challenge\*\*: ([^\n]+)\n- \*\*Part 1\*\*: ([^\n]+)\n- \*\*Part 2\*\*: ([^\n]+)"
+        title_match = re.search(title_pattern, content)
+        if title_match:
+            challenge_title = title_match.group(1)
+            part2_desc = title_match.group(3)
+            if part2_desc != "[Enhanced version - update after completing]":
+                # Use Part 2 description if it's been filled in
+                if len(part2_desc) > 50:
+                    description = part2_desc[:47] + "..."
+                else:
+                    description = part2_desc
+            else:
+                # Fall back to Part 1 description
+                part1_desc = title_match.group(2)
+                if len(part1_desc) > 50:
+                    description = part1_desc[:47] + "..."
+                else:
+                    description = part1_desc
         else:
-            description = part1_desc
+            challenge_title = f"Day {day}"
+            description = ""
     else:
-        challenge_title = f"Day {day}"
-        description = ""
+        # For Part 1, use Part 1 description
+        title_pattern = f"### Day {day} \(Dec {day}, 2025\)\n- \*\*Challenge\*\*: ([^\n]+)\n- \*\*Part 1\*\*: ([^\n]+)"
+        title_match = re.search(title_pattern, content)
+        if title_match:
+            challenge_title = title_match.group(1)
+            part1_desc = title_match.group(2)
+            # Create a short description from Part 1
+            if len(part1_desc) > 50:
+                description = part1_desc[:47] + "..."
+            else:
+                description = part1_desc
+        else:
+            challenge_title = f"Day {day}"
+            description = ""
     
     # Check if there's already a custom description in the progress tracker
     existing_line_pattern = f"- \[[x ]\] \*\*Day {day}\*\*([^\n]*)"
