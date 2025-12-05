@@ -160,55 +160,33 @@ def mark_day_completed(day, part=1):
         
     content = readme_path.read_text()
     
-    # Get the challenge title and description from daily log if it exists
-    if part == 2:
-        # For Part 2, try to get Part 2 description first
-        title_pattern = f"### Day {day} \(Dec {day}, 2025\)\n- \*\*Challenge\*\*: ([^\n]+)\n- \*\*Part 1\*\*: ([^\n]+)\n- \*\*Part 2\*\*: ([^\n]+)"
-        title_match = re.search(title_pattern, content)
-        if title_match:
-            challenge_title = title_match.group(1)
-            part2_desc = title_match.group(3)
-            if part2_desc != "[Enhanced version - update after completing]":
-                # Use Part 2 description if it's been filled in
-                if len(part2_desc) > 50:
-                    description = part2_desc[:47] + "..."
-                else:
-                    description = part2_desc
-            else:
-                # Fall back to Part 1 description
-                part1_desc = title_match.group(2)
-                if len(part1_desc) > 50:
-                    description = part1_desc[:47] + "..."
-                else:
-                    description = part1_desc
+    # Get the challenge title and part 1 description from daily log
+    title_pattern = f"### Day {day} \(Dec {day}, 2025\)\n- \*\*Challenge\*\*: ([^\n]+)\n- \*\*Part 1\*\*: ([^\n]+)"
+    title_match = re.search(title_pattern, content)
+    if title_match:
+        challenge_title = title_match.group(1)
+        part1_desc = title_match.group(2)
+        
+        # Extract description from challenge title if it has " - "
+        if " - " in challenge_title:
+            description = challenge_title.split(" - ", 1)[1]
         else:
-            challenge_title = f"Day {day}"
-            description = ""
-    else:
-        # For Part 1, use Part 1 description
-        title_pattern = f"### Day {day} \(Dec {day}, 2025\)\n- \*\*Challenge\*\*: ([^\n]+)\n- \*\*Part 1\*\*: ([^\n]+)"
-        title_match = re.search(title_pattern, content)
-        if title_match:
-            challenge_title = title_match.group(1)
-            part1_desc = title_match.group(2)
-            # Create a short description from Part 1
-            if len(part1_desc) > 50:
-                description = part1_desc[:47] + "..."
-            else:
+            # Use Part 1 description as fallback, but clean it up
+            if "..." not in part1_desc and len(part1_desc) < 60:
                 description = part1_desc
-        else:
-            challenge_title = f"Day {day}"
-            description = ""
+            else:
+                # For very long or truncated descriptions, create a simple one
+                simple_descriptions = {
+                    "Printing Department": "Navigate printing department challenges",
+                    "Cafeteria": "Solve cafeteria logistics puzzle",
+                    "Grid Walker": "Navigate through a 2D grid"
+                }
+                description = simple_descriptions.get(challenge_title, "")
+    else:
+        challenge_title = f"Day {day}"
+        description = ""
     
-    # Check if there's already a custom description in the progress tracker
-    existing_line_pattern = f"- \[[x ]\] \*\*Day {day}\*\*([^\n]*)"
-    existing_match = re.search(existing_line_pattern, content)
-    existing_line = existing_match.group(1) if existing_match else ""
-    
-    # Check if there's already a custom description in the format "- *Description*"
-    existing_desc_match = re.search(r"- \*([^*]+)\*", existing_line)
-    if existing_desc_match:
-        description = existing_desc_match.group(1)  # Keep existing custom description
+    # Always use the description from Daily Log, don't preserve existing ones
     
     # Update progress tracker - handle various formats
     day_pattern = f"- \[[x ]\] \*\*Day {day}\*\*[^\n]*"
