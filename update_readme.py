@@ -160,20 +160,40 @@ def mark_day_completed(day, part=1):
         
     content = readme_path.read_text()
     
-    # Get the challenge title from daily log if it exists
-    title_pattern = f"### Day {day} \(Dec {day}, 2025\)\n- \*\*Challenge\*\*: ([^\n]+)"
+    # Get the challenge title and description from daily log if it exists
+    title_pattern = f"### Day {day} \(Dec {day}, 2025\)\n- \*\*Challenge\*\*: ([^\n]+)\n- \*\*Part 1\*\*: ([^\n]+)"
     title_match = re.search(title_pattern, content)
-    challenge_title = title_match.group(1) if title_match else f"Day {day}"
+    if title_match:
+        challenge_title = title_match.group(1)
+        part1_desc = title_match.group(2)
+        # Create a short description from Part 1
+        if len(part1_desc) > 50:
+            description = part1_desc[:47] + "..."
+        else:
+            description = part1_desc
+    else:
+        challenge_title = f"Day {day}"
+        description = ""
+    
+    # Check if there's already a custom description in the progress tracker
+    existing_line_pattern = f"- \[[x ]\] \*\*Day {day}\*\*([^\n]*)"
+    existing_match = re.search(existing_line_pattern, content)
+    existing_line = existing_match.group(1) if existing_match else ""
+    
+    # Check if there's already a custom description in the format "- *Description*"
+    existing_desc_match = re.search(r"- \*([^*]+)\*", existing_line)
+    if existing_desc_match:
+        description = existing_desc_match.group(1)  # Keep existing custom description
     
     # Update progress tracker - handle various formats
     day_pattern = f"- \[[x ]\] \*\*Day {day}\*\*[^\n]*"
     
     if part == 1:
         # Mark part 1 completed
-        new_entry = f"- [x] **Day {day}** - ⭐ {challenge_title}"
+        new_entry = f"- [x] **Day {day}** - ⭐ {challenge_title} - *{description}*" if description else f"- [x] **Day {day}** - ⭐ {challenge_title}"
     else:
-        # Mark both parts completed
-        new_entry = f"- [x] **Day {day}** - ⭐⭐ {challenge_title}"
+        # Mark both parts completed  
+        new_entry = f"- [x] **Day {day}** - ⭐⭐ {challenge_title} - *{description}*" if description else f"- [x] **Day {day}** - ⭐⭐ {challenge_title}"
     
     # Replace the entire day line
     if re.search(day_pattern, content):
