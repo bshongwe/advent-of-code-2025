@@ -58,7 +58,7 @@ crontab -e
 - [x] **Day 3** - ⭐⭐ Grid Walker - *Navigate through a 2D grid*
 - [x] **Day 4** - ⭐⭐ Printing Department - *Navigate printing department challenges*
 - [x] **Day 5** - ⭐⭐ Cafeteria - *Solve cafeteria logistics puzzle*
-- [ ] **Day 6** - Available Dec 6 at 06:00 SAST
+- [ ] **Day 6** - 📁 Files ready - Available Dec 6 at 06:00 SAST
 - [ ] **Day 7** - Available Dec 7 at 06:00 SAST
 
 ### Week 2 (Dec 8-12)
