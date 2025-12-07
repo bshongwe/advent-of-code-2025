@@ -17,8 +17,6 @@ advent-of-code-2025/
     ├── solution-part2.py   # Python solution (Part 2)
     ├── solution.rs         # Rust solution (Part 1)
     ├── solution-part2.rs   # Rust solution (Part 2)
-    ├── solution.js         # JavaScript solution (Part 1)
-    ├── solution-part2.js   # JavaScript solution (Part 2)
     └── solution.csv        # Puzzle input data (gitignored)
 ```
 
@@ -46,27 +44,32 @@ crontab -e
 - **📅 Date-Aware**: Automatically detects which day should be generated
 - **⏰ Release Schedule**: Respects AoC release times (06:00 SAST)
 - **🔄 Auto-Generation**: Cron job creates files when puzzles are released
-- **🐍 🦀 🟨 Multi-Language**: Templates for Python, Rust, and JavaScript solutions
+- **🐍 🦀 Multi-Language**: Templates for both Python and Rust solutions
 - **📝 Smart Logging**: All automation activities are logged
 - **🔍 Missing Day Detection**: Finds and creates missing previous days
 
 ## 📊 Progress Tracker
 
 ### Week 1 (Dec 1-7)
-- [x] **Day 1** - ⭐⭐ Dial Puzzle - *Password*
+- [x] **Day 1** - ⭐⭐ Dial Puzzle - *Password: 1029 / 5892*
 - [x] **Day 2** - ⭐⭐ Gift Shop - *Invalid ID pattern detection*
-- [x] **Day 3** - ⭐⭐ Grid Walker - *Navigate through a 2D grid*
-- [x] **Day 4** - ⭐⭐ Printing Department - *Navigate printing department challenges*
-- [x] **Day 5** - ⭐⭐ Cafeteria - *Solve cafeteria logistics puzzle*
-- [x] **Day 6** - ⭐⭐ Day 6
-- [x] **Day 7** - ⭐⭐ Day 7
+- [x] **Day 3** - ⭐⭐ Grid Walker
+- [x] **Day 4** - ⭐⭐ Printing Department
+- [ ] **Day 5** - Available Dec 5 at 06:00 SAST
+- [ ] **Day 6** - Available Dec 6 at 06:00 SAST
+- [ ] **Day 7** - Available Dec 7 at 06:00 SAST
 
 ### Week 2 (Dec 8-12)
 - [ ] **Day 8** - Available Dec 8 at 06:00 SAST
 - [ ] **Day 9** - Available Dec 9 at 06:00 SAST
-- [ ] **Day 10** - Available Dec 10 at 06:00 SAST
-- [ ] **Day 11** - Available Dec 11 at 06:00 SAST
-- [ ] **Day 12** - Final Day! Available Dec 12 at 06:00 SAST ⭐
+- [x] **Day 7** - Available Dec 10 at 06:00 SAST
+
+### Week 2 (Dec 8-12)
+- [ ] **Day 8** - Available Dec 11 at 06:00 SAST
+- [ ] **Day 9** - Available Dec 12 at 06:00 SAST
+- [ ] **Day 10** - Available Dec 13 at 06:00 SAST
+- [ ] **Day 11** - Available Dec 14 at 06:00 SAST
+- [ ] **Day 12** - Final Day! Available Dec 15 at 06:00 SAST ⭐
 
 ## 🏃 Running Solutions
 
@@ -169,4 +172,3 @@ node solution-part2.js       # Part 2
 ---
 
 *Last updated: December 07, 2025*  
-*Next puzzle releases: December 5 at 06:00 SAST*
