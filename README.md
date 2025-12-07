@@ -58,8 +58,8 @@ crontab -e
 - [x] **Day 3** - ⭐⭐ Grid Walker - *Navigate through a 2D grid*
 - [x] **Day 4** - ⭐⭐ Printing Department - *Navigate printing department challenges*
 - [x] **Day 5** - ⭐⭐ Cafeteria - *Solve cafeteria logistics puzzle*
-- [ ] **Day 6** - 📁 Files ready - Available Dec 6 at 06:00 SAST
-- [ ] **Day 7** - 📁 Files ready - Available Dec 7 at 06:00 SAST
+- [x] **Day 6** - ⭐⭐ Day 6
+- [x] **Day 7** - ⭐⭐ Day 7
 
 ### Week 2 (Dec 8-12)
 - [ ] **Day 8** - Available Dec 8 at 06:00 SAST
@@ -161,12 +161,12 @@ node solution-part2.js       # Part 2
 
 ## 🏆 Statistics
 
-- **Total Stars**: 36/24 ⭐
-- **Days Completed**: 8/12
+- **Total Stars**: 42/24 ⭐
+- **Days Completed**: 10/12
 - **Languages Used**: Python, Rust, JavaScript
 - **Automation Level**: Full 🤖
 
 ---
 
-*Last updated: December 05, 2025*  
+*Last updated: December 07, 2025*  
 *Next puzzle releases: December 5 at 06:00 SAST*
