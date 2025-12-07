@@ -179,7 +179,9 @@ def mark_day_completed(day, part=1):
                 simple_descriptions = {
                     "Printing Department": "Navigate printing department challenges",
                     "Cafeteria": "Solve cafeteria logistics puzzle",
-                    "Grid Walker": "Navigate through a 2D grid"
+                    "Grid Walker": "Navigate through a 2D grid",
+                    "Trash Compactor": "Cephalopod math worksheet",
+                    "Laboratories": "Laboratory challenges"
                 }
                 description = simple_descriptions.get(challenge_title, "")
     else:
@@ -198,13 +200,16 @@ def mark_day_completed(day, part=1):
         # Mark both parts completed  
         new_entry = f"- [x] **Day {day}** - ⭐⭐ {challenge_title} - *{description}*" if description else f"- [x] **Day {day}** - ⭐⭐ {challenge_title}"
     
-    # Replace the entire day line
+    # Replace the entire day line (only first occurrence to avoid duplicates)
     if re.search(day_pattern, content):
-        content = re.sub(day_pattern, new_entry, content)
+        content = re.sub(day_pattern, new_entry, content, count=1)
         
-        # Update stats
-        stars = content.count("⭐⭐") * 2 + (content.count("⭐") - content.count("⭐⭐"))
-        days = content.count("- [x]")
+        # Update stats - only count stars in Progress Tracker section
+        progress_section = content.split("## 📊 Progress Tracker")[1].split("## 🏃 Running Solutions")[0]
+        double_stars = progress_section.count("⭐⭐")
+        single_stars = progress_section.count("⭐") - (double_stars * 2)
+        stars = (double_stars * 2) + single_stars
+        days = progress_section.count("- [x]")
         
         # Find and update statistics
         stats_pattern = r"\*\*Total Stars\*\*: \d+/\d+ ⭐\n- \*\*Days Completed\*\*: \d+/\d+"

@@ -51,18 +51,13 @@ crontab -e
 ## 📊 Progress Tracker
 
 ### Week 1 (Dec 1-7)
-- [x] **Day 1** - ⭐⭐ Dial Puzzle - *Password: 1029 / 5892*
+- [x] **Day 1** - ⭐⭐ Dial Puzzle - *Password*
 - [x] **Day 2** - ⭐⭐ Gift Shop - *Invalid ID pattern detection*
-- [x] **Day 3** - ⭐⭐ Grid Walker
-- [x] **Day 4** - ⭐⭐ Printing Department
-- [ ] **Day 5** - Available Dec 5 at 06:00 SAST
-- [ ] **Day 6** - Available Dec 6 at 06:00 SAST
-- [ ] **Day 7** - Available Dec 7 at 06:00 SAST
-
-### Week 2 (Dec 8-12)
-- [ ] **Day 8** - Available Dec 8 at 06:00 SAST
-- [ ] **Day 9** - Available Dec 9 at 06:00 SAST
-- [x] **Day 7** - Available Dec 10 at 06:00 SAST
+- [x] **Day 3** - ⭐⭐ Grid Walker - *Navigate through a 2D grid*
+- [x] **Day 4** - ⭐⭐ Printing Department - *Navigate printing department challenges*
+- [x] **Day 5** - ⭐⭐ Cafeteria - *Solve cafeteria logistics puzzle*
+- [x] **Day 6** - ⭐⭐ Trash Compactor - *Cephalopod math worksheet*
+- [x] **Day 7** - ⭐⭐ Laboratories - *Laboratory challenges*
 
 ### Week 2 (Dec 8-12)
 - [ ] **Day 8** - Available Dec 11 at 06:00 SAST
@@ -136,6 +131,22 @@ node solution-part2.js       # Part 2
 - **Time to Solve**: 1 hour 9 minutes
 - **Difficulty**: ⭐⭐⭐☆☆
 
+### Day 6 (Dec 6, 2025)
+- **Challenge**: Trash Compactor
+- **Part 1**: After helping the Elves in the kitchen, you were taking a break and helping them re-enact a movie...
+- **Part 2**: [Enhanced version - update after completing]
+- **Languages**: Python ⏳, Rust ⏳
+- **Time to Solve**: [Your time here]
+- **Difficulty**: ⭐⭐⭐☆☆
+
+### Day 7 (Dec 7, 2025)
+- **Challenge**: Laboratories
+- **Part 1**: You thank the cephalopods for the help and exit the trash compactor, finding yourself in the fami...
+- **Part 2**: [Enhanced version - update after completing]
+- **Languages**: Python ⏳, Rust ⏳
+- **Time to Solve**: [Your time here]
+- **Difficulty**: ⭐⭐☆☆☆
+
 ## 🎯 Goals
 
 - [x] Set up automated file generation
@@ -164,8 +175,8 @@ node solution-part2.js       # Part 2
 
 ## 🏆 Statistics
 
-- **Total Stars**: 42/24 ⭐
-- **Days Completed**: 10/12
+- **Total Stars**: 15/24 ⭐
+- **Days Completed**: 7/12
 - **Languages Used**: Python, Rust, JavaScript
 - **Automation Level**: Full 🤖
 
