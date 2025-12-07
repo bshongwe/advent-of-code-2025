@@ -59,7 +59,7 @@ crontab -e
 - [x] **Day 4** - ⭐⭐ Printing Department - *Navigate printing department challenges*
 - [x] **Day 5** - ⭐⭐ Cafeteria - *Solve cafeteria logistics puzzle*
 - [ ] **Day 6** - 📁 Files ready - Available Dec 6 at 06:00 SAST
-- [ ] **Day 7** - Available Dec 7 at 06:00 SAST
+- [ ] **Day 7** - 📁 Files ready - Available Dec 7 at 06:00 SAST
 
 ### Week 2 (Dec 8-12)
 - [ ] **Day 8** - Available Dec 8 at 06:00 SAST
