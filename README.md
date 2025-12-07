@@ -32,6 +32,18 @@ python3 generate_day.py
 python3 generate_day.py 15
 ```
 
+### Update README Automation
+```bash
+# Fetch puzzle info and add Daily Log entry
+python3 update_readme.py auto <day>
+
+# Mark day as complete in Progress Tracker
+python3 update_readme.py complete <day> <part>
+
+# Manually add Daily Log entry
+python3 update_readme.py add <day>
+```
+
 ### Set Up Auto-Generation
 ```bash
 # See CRON_SETUP.md for full instructions
