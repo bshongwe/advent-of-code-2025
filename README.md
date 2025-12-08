@@ -72,7 +72,7 @@ crontab -e
 - [x] **Day 7** - ⭐⭐ Laboratories - *Laboratory challenges*
 
 ### Week 2 (Dec 8-12)
-- [ ] **Day 8** - 📁 Files ready - Available Dec 11 at 06:00 SAST
+- [x] **Day 8** - ⭐⭐ Playground - - *Minimum Spanning Tree in 3D Space*
 - [ ] **Day 9** - Available Dec 12 at 06:00 SAST
 - [ ] **Day 10** - Available Dec 13 at 06:00 SAST
 - [ ] **Day 11** - Available Dec 14 at 06:00 SAST
@@ -159,6 +159,14 @@ node solution-part2.js       # Part 2
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐☆☆☆
 
+### Day 8 (Dec 8, 2025)
+- **Challenge**: Playground
+- **Part 1**: Equipped with a new understanding of teleporter maintenance, you confidently step onto the repair...
+- **Part 2**: [Enhanced version - update after completing]
+- **Languages**: Python ⏳, Rust ⏳
+- **Time to Solve**: [Your time here]
+- **Difficulty**: ⭐⭐⭐☆☆
+
 ## 🎯 Goals
 
 - [x] Set up automated file generation
@@ -187,11 +195,11 @@ node solution-part2.js       # Part 2
 
 ## 🏆 Statistics
 
-- **Total Stars**: 15/24 ⭐
-- **Days Completed**: 7/12
+- **Total Stars**: 17/24 ⭐
+- **Days Completed**: 8/12
 - **Languages Used**: Python, Rust, JavaScript
 - **Automation Level**: Full 🤖
 
 ---
 
-*Last updated: December 07, 2025*  
+*Last updated: December 08, 2025*  
