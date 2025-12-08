@@ -72,7 +72,7 @@ crontab -e
 - [x] **Day 7** - ⭐⭐ Laboratories - *Laboratory challenges*
 
 ### Week 2 (Dec 8-12)
-- [ ] **Day 8** - Available Dec 11 at 06:00 SAST
+- [ ] **Day 8** - 📁 Files ready - Available Dec 11 at 06:00 SAST
 - [ ] **Day 9** - Available Dec 12 at 06:00 SAST
 - [ ] **Day 10** - Available Dec 13 at 06:00 SAST
 - [ ] **Day 11** - Available Dec 14 at 06:00 SAST
