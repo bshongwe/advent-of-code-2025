@@ -72,8 +72,8 @@ crontab -e
 - [x] **Day 7** - ⭐⭐ Laboratories - *Laboratory challenges*
 
 ### Week 2 (Dec 8-12)
-- [x] **Day 8** - ⭐⭐ Playground - - *Minimum Spanning Tree in 3D Space*
-- [x] **Day 9** - ⭐ Day 9
+- [x] **Day 8** - ⭐⭐ Playground - *Minimum Spanning Tree in 3D Space*
+- [x] **Day 9** - ⭐⭐ Movie Theater - *Largest Rectangle in Polygon*
 - [ ] **Day 10** - Available Dec 13 at 06:00 SAST
 - [ ] **Day 11** - Available Dec 14 at 06:00 SAST
 - [ ] **Day 12** - Final Day! Available Dec 15 at 06:00 SAST ⭐
@@ -203,7 +203,7 @@ node solution-part2.js       # Part 2
 
 ## 🏆 Statistics
 
-- **Total Stars**: 18/24 ⭐
+- **Total Stars**: 19/24 ⭐
 - **Days Completed**: 9/12
 - **Languages Used**: Python, Rust, JavaScript
 - **Automation Level**: Full 🤖
