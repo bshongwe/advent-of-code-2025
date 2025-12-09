@@ -149,6 +149,40 @@ def update_daily_log(day, title, description, difficulty="⭐⭐⭐☆☆"):
         print("⚠️  Could not find insertion point in README.md")
         return False
 
+def update_daily_log_languages(day, part):
+    """Update Languages line and Part 2 in Daily Log"""
+    repo_root = Path(__file__).parent
+    readme_path = repo_root / "README.md"
+    day_dir = repo_root / f"day-{day}"
+    
+    if not readme_path.exists():
+        return False
+    
+    content = readme_path.read_text()
+    
+    # Check which language files exist
+    py_done = (day_dir / "solution.py").exists() and (part == 2 and (day_dir / "solution-part2.py").exists() or part == 1)
+    rs_done = (day_dir / "solution.rs").exists() and (part == 2 and (day_dir / "solution-part2.rs").exists() or part == 1)
+    js_done = (day_dir / "solution.js").exists() and (part == 2 and (day_dir / "solution-part2.js").exists() or part == 1)
+    
+    py_status = "✅" if py_done else "⏳"
+    rs_status = "✅" if rs_done else "⏳"
+    js_status = "✅" if js_done else "⏳"
+    
+    # Update Languages line in Daily Log
+    lang_pattern = f"(### Day {day} \(Dec {day}, 2025\)[^#]*- \*\*Languages\*\*:) [^\n]+"
+    lang_replacement = f"\\1 Python {py_status}, Rust {rs_status}, JavaScript {js_status}"
+    content = re.sub(lang_pattern, lang_replacement, content)
+    
+    # Update Part 2 description if part 2 is completed
+    if part == 2:
+        part2_pattern = f"(### Day {day} \(Dec {day}, 2025\)[^#]*- \*\*Part 2\*\*:) \[Enhanced version - update after completing\]"
+        part2_replacement = f"\\1 Completed both parts"
+        content = re.sub(part2_pattern, part2_replacement, content)
+    
+    readme_path.write_text(content)
+    return True
+
 def mark_day_completed(day, part=1):
     """Mark a day as completed in the progress tracker"""
     repo_root = Path(__file__).parent
@@ -159,6 +193,9 @@ def mark_day_completed(day, part=1):
         return False
         
     content = readme_path.read_text()
+    
+    # Update Daily Log languages
+    update_daily_log_languages(day, part)
     
     # Get the challenge title and part 1 description from daily log
     title_pattern = f"### Day {day} \(Dec {day}, 2025\)\n- \*\*Challenge\*\*: ([^\n]+)\n- \*\*Part 1\*\*: ([^\n]+)"
@@ -175,18 +212,21 @@ def mark_day_completed(day, part=1):
             if "..." not in part1_desc and len(part1_desc) < 60:
                 description = part1_desc
             else:
-                # For very long or truncated descriptions, create a simple one
+                # For truncated descriptions, try to derive from title or use fallback
                 simple_descriptions = {
                     "Printing Department": "Navigate printing department challenges",
                     "Cafeteria": "Solve cafeteria logistics puzzle",
                     "Grid Walker": "Navigate through a 2D grid",
                     "Trash Compactor": "Cephalopod math worksheet",
-                    "Laboratories": "Laboratory challenges"
+                    "Laboratories": "Laboratory challenges",
+                    "Playground": "Minimum Spanning Tree in 3D Space",
+                    "Movie Theater": "Largest Rectangle in Polygon"
                 }
-                description = simple_descriptions.get(challenge_title, "")
+                # Use dictionary or generate from title
+                description = simple_descriptions.get(challenge_title, f"{challenge_title} challenge")
     else:
         challenge_title = f"Day {day}"
-        description = ""
+        description = f"Day {day} challenge"
     
     # Always use the description from Daily Log, don't preserve existing ones
     
@@ -206,10 +246,14 @@ def mark_day_completed(day, part=1):
         
         # Update stats - only count stars in Progress Tracker section
         progress_section = content.split("## 📊 Progress Tracker")[1].split("## 🏃 Running Solutions")[0]
-        double_stars = progress_section.count("⭐⭐")
-        single_stars = progress_section.count("⭐") - (double_stars * 2)
-        stars = (double_stars * 2) + single_stars
+        # Count completed days
         days = progress_section.count("- [x]")
+        # Count stars only in completed lines (lines starting with "- [x]")
+        completed_lines = [line for line in progress_section.split('\n') if line.strip().startswith('- [x]')]
+        double_star_count = sum(line.count("⭐⭐") for line in completed_lines)
+        total_star_chars = sum(line.count("⭐") for line in completed_lines)
+        single_star_count = total_star_chars - (double_star_count * 2)
+        stars = (double_star_count * 2) + single_star_count
         
         # Find and update statistics
         stats_pattern = r"\*\*Total Stars\*\*: \d+/\d+ ⭐\n- \*\*Days Completed\*\*: \d+/\d+"
@@ -223,6 +267,10 @@ def mark_day_completed(day, part=1):
         content = re.sub(timestamp_pattern, new_timestamp, content)
         
         readme_path.write_text(content)
+        
+        # Update Daily Log languages after updating Progress Tracker
+        update_daily_log_languages(day, part)
+        
         print(f"✅ Marked Day {day} Part {part} as completed")
         return True
     else:

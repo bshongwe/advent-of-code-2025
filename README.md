@@ -122,56 +122,56 @@ node solution-part2.js       # Part 2
 ### Day 3 (Dec 3, 2025)
 - **Challenge**: Grid Walker
 - **Part 1**: Navigate through a 2D grid
-- **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ✅, Rust ✅, JavaScript ✅
+- **Part 2**: Completed both parts
+- **Languages**: Python ✅, Rust ✅, JavaScript ⏳
 - **Time to Solve**: 2 hours 11 minutes
 - **Difficulty**: ⭐⭐⭐☆☆
 
 ### Day 4 (Dec 4, 2025)
 - **Challenge**: Printing Department
 - **Part 1**: You ride the escalator down to the printing department. They're clearly getting ready for Christm...
-- **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ✅, Rust ✅, JavaScript ✅
+- **Part 2**: Completed both parts
+- **Languages**: Python ✅, Rust ✅, JavaScript ⏳
 - **Time to Solve**: 1 hour 52 minutes
 - **Difficulty**: ⭐⭐⭐☆☆
 
 ### Day 5 (Dec 5, 2025)
 - **Challenge**: Cafeteria
 - **Part 1**: As the forklifts break through the wall, the Elves are delighted to discover that there was a caf...
-- **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ⏳, Rust ⏳, JavaScript ⏳
+- **Part 2**: Completed both parts
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
 - **Time to Solve**: 1 hour 9 minutes
 - **Difficulty**: ⭐⭐⭐☆☆
 
 ### Day 6 (Dec 6, 2025)
 - **Challenge**: Trash Compactor
 - **Part 1**: After helping the Elves in the kitchen, you were taking a break and helping them re-enact a movie...
-- **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ⏳, Rust ⏳
+- **Part 2**: Completed both parts
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
 ### Day 7 (Dec 7, 2025)
 - **Challenge**: Laboratories
 - **Part 1**: You thank the cephalopods for the help and exit the trash compactor, finding yourself in the fami...
-- **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ⏳, Rust ⏳
+- **Part 2**: Completed both parts
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐☆☆☆
 
 ### Day 8 (Dec 8, 2025)
 - **Challenge**: Playground
 - **Part 1**: Equipped with a new understanding of teleporter maintenance, you confidently step onto the repair...
-- **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ⏳, Rust ⏳
+- **Part 2**: Completed both parts
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
 ### Day 9 (Dec 9, 2025)
 - **Challenge**: Movie Theater
 - **Part 1**: You slide down the firepole in the corner of the playground and land in the North Pole base movie...
-- **Part 2**: [Enhanced version - update after completing]
-- **Languages**: Python ⏳, Rust ⏳
+- **Part 2**: Completed both parts
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
