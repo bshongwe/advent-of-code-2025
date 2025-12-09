@@ -110,5 +110,6 @@ def solve_movie_theater_part2(filename):
     
     return max_area
 
+# Solve and print result
 result = solve_movie_theater_part2('solution.csv')
 print(f"\nAnswer: {result}")
