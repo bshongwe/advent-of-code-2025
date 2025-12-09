@@ -73,7 +73,7 @@ crontab -e
 
 ### Week 2 (Dec 8-12)
 - [x] **Day 8** - ⭐⭐ Playground - - *Minimum Spanning Tree in 3D Space*
-- [ ] **Day 9** - 📁 Files ready - Available Dec 12 at 06:00 SAST
+- [x] **Day 9** - ⭐ Day 9
 - [ ] **Day 10** - Available Dec 13 at 06:00 SAST
 - [ ] **Day 11** - Available Dec 14 at 06:00 SAST
 - [ ] **Day 12** - Final Day! Available Dec 15 at 06:00 SAST ⭐
@@ -167,6 +167,14 @@ node solution-part2.js       # Part 2
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
+### Day 9 (Dec 9, 2025)
+- **Challenge**: Movie Theater
+- **Part 1**: You slide down the firepole in the corner of the playground and land in the North Pole base movie...
+- **Part 2**: [Enhanced version - update after completing]
+- **Languages**: Python ⏳, Rust ⏳
+- **Time to Solve**: [Your time here]
+- **Difficulty**: ⭐⭐⭐☆☆
+
 ## 🎯 Goals
 
 - [x] Set up automated file generation
@@ -195,11 +203,11 @@ node solution-part2.js       # Part 2
 
 ## 🏆 Statistics
 
-- **Total Stars**: 17/24 ⭐
-- **Days Completed**: 8/12
+- **Total Stars**: 18/24 ⭐
+- **Days Completed**: 9/12
 - **Languages Used**: Python, Rust, JavaScript
 - **Automation Level**: Full 🤖
 
 ---
 
-*Last updated: December 08, 2025*  
+*Last updated: December 09, 2025*  
