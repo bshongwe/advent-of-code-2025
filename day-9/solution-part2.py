@@ -1,6 +1,8 @@
 """
 Advent of Code 2025 - Day 9 Part 2
-Direct translation from Rust
+Determine the largest rectangle that
+can be formed using only red and
+green tiles.
 """
 
 def solve_movie_theater_part2(filename):
