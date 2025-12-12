@@ -207,7 +207,7 @@ node solution-part2.js       # Part 2
 - [ ] Complete all 12 days
 - [ ] Optimize solutions for performance
 - [ ] Document interesting algorithms used
-- [ ] Compare Python vs Rust vs JavaScript execution times
+- [x] Compare Python vs Rust vs JavaScript execution times
 
 ## 🔧 Tools & Technologies
 
