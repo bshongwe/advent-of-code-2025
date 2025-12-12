@@ -74,9 +74,9 @@ crontab -e
 ### Week 2 (Dec 8-12)
 - [x] **Day 8** - ⭐⭐ Playground - *Minimum Spanning Tree in 3D Space*
 - [x] **Day 9** - ⭐⭐ Movie Theater - *Largest Rectangle in Polygon*
-- [ ] **Day 10** - 📁 Files ready - Available Dec 13 at 06:00 SAST
-- [ ] **Day 11** - 📁 Files ready - Available Dec 14 at 06:00 SAST
-- [ ] **Day 12** - 📁 Files ready - Final Day! Available Dec 15 at 06:00 SAST ⭐
+- [x] **Day 10** - ⭐⭐ Factory - *Factory challenge*
+- [x] **Day 11** - ⭐⭐ Reactor - *Reactor challenge*
+- [x] **Day 12** - ⭐⭐ Christmas Tree Farm - *Christmas Tree Farm challenge*
 
 ## 🏃 Running Solutions
 
@@ -175,6 +175,30 @@ node solution-part2.js       # Part 2
 - **Time to Solve**: [Your time here]
 - **Difficulty**: ⭐⭐⭐☆☆
 
+### Day 10 (Dec 10, 2025)
+- **Challenge**: Factory
+- **Part 1**: Just across the hall, you find a large factory. Fortunately, the Elves here have plenty of time t...
+- **Part 2**: Completed both parts
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
+- **Time to Solve**: [Your time here]
+- **Difficulty**: ⭐⭐☆☆☆
+
+### Day 11 (Dec 11, 2025)
+- **Challenge**: Reactor
+- **Part 1**: You hear some loud beeping coming from a hatch in the floor of the factory, so you decide to chec...
+- **Part 2**: Completed both parts
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
+- **Time to Solve**: [Your time here]
+- **Difficulty**: ⭐⭐⭐☆☆
+
+### Day 12 (Dec 12, 2025)
+- **Challenge**: Christmas Tree Farm
+- **Part 1**: You're almost out of time, but there can't be much left to decorate. Although there are no stairs...
+- **Part 2**: Completed both parts
+- **Languages**: Python ✅, Rust ✅, JavaScript ✅
+- **Time to Solve**: [Your time here]
+- **Difficulty**: ⭐⭐⭐⭐☆
+
 ## 🎯 Goals
 
 - [x] Set up automated file generation
@@ -203,11 +227,11 @@ node solution-part2.js       # Part 2
 
 ## 🏆 Statistics
 
-- **Total Stars**: 18/24 ⭐
-- **Days Completed**: 9/12
+- **Total Stars**: 24/24 ⭐
+- **Days Completed**: 12/12
 - **Languages Used**: Python, Rust, JavaScript
 - **Automation Level**: Full 🤖
 
 ---
 
-*Last updated: December 09, 2025*  
+*Last updated: December 12, 2025*  
